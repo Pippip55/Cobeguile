@@ -1,0 +1,41 @@
+const display = document.getElementById('display');
+let currentInput = "0" ;
+
+function appendValue(value) {
+    if (currentInput === "0" && value !== "."){
+        currentInput = value;
+    }    
+    else {
+        currentInput += value;
+    }
+    updateDisplay();
+}
+
+function updateDisplay(){
+    display.textContent = currentInput;
+}
+
+function clearDisplay(){
+    currentInput = "0" ;
+    updateDisplay() ;
+}
+
+function deleteChar(){
+    if (currentInput.length > 1){
+        currentInput = currentInput.slice(0, -1);
+    }
+    else {
+        currentInput = "0"
+    }
+    updateDisplay();
+}
+
+function calculate() {
+    try {
+        currentInput = eval(currentInput).toString();
+    }
+    catch (error) {
+        currentInput = "Error";
+    }
+    updateDisplay() ;
+}
