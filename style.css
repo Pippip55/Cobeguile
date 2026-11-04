@@ -1,79 +1,64 @@
 body {
-    background-color: antiquewhite;
-    color: #000;
-    font-family: 'Elsie' , 'Segoe UI' , Tahoma, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0;
+  margin: 0;
+  background: mistyrose;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  user-select: none;
 }
-.calculator-card {
-    width: 280px;
-    background: #ffffff;
-    border-radius: 20px;
-    padding: 20px;
-    box-shadow: 0 10px 25px rgba(red, green, blue, alpha);
-    border: 1px solid #2d2d38;
+
+.calculator {
+  width: 240px;
+  background-color: #c6d9bb;
+  padding: 15px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+  -webkit-app-region: no-drag;
 }
 
 .display {
-    background: #141419;
-    color: #4caf4c;
-    font-size: medium;
-    font-weight: bold;
-    text-align: right;
-    padding: 15px;
-    border-radius: 12px;
-    margin-bottom: 20px;
-    border: 1px solid #2d2d38;
-    overflow-x: auto;
+  width: 100%;
+  height: 50px;
+  background-color: #000;
+  color: #00ff66;
+  font-size: 1.8rem;
+  text-align: right;
+  padding: 8px 12px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  box-sizing: border-box;
 }
 
-.bottons {
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 10px;
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
 }
 
-.btn {
-    background: #2a2a36;
-    color: #ffffff;
-    padding: 15px;
-    border: none;
-    font-size: 18px;
-    border-radius: 12px;
-    cursor: pointer;
-    transition: 0.2s;
+button {
+  height: 45px;
+  border-radius: 8px;
+  border: none;
+  background-color: #333;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
 }
 
-.btn:hover{
-    background: #3a3a4a;
+.btn-wide { 
+  grid-column: span 2; 
 }
 
-.btn.operator {
-    background: #3a3a4a;
-    color: #ffb703;
+.btn-tall { 
+  grid-row: span 2; 
+  height: 98px; 
 }
 
-.btn.operator:hover{
-    background: #4a402d;
+.btn-op { 
+  background-color: #ff9500; 
 }
-
-.btn.clear {
-    background: #3b2222;
-    color: #f44336;
-}
-
-.btn.delete {
-    background: #4caf50;
-    color: #f44336;
-}
-
-.btn.equals:hover {
-    background: #45a049;
-}
-
-.btn.zero{
-    grid-column: span 2;
+button {
+  -webkit-app-region: no-drag;
 }
